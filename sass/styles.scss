@@ -291,16 +291,16 @@ Hero
   position: fixed;
   width: 100%;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.8); /* White background with 80% opacity */
+  background: rgba(0, 0, 0, 0.775)
 }
 .fixed {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.88);
+  background-color:  rgba(0, 0, 0, 0.775);
   z-index: 999;
   width: 100%;
 }
 header {
-  padding: 15px 0;
+  padding: 8px 0;
   border-bottom: solid 1px rgba(255, 255, 255, 0.2);
   position: relative;
   width: 1170px;
