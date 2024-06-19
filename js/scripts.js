@@ -195,10 +195,10 @@ $(function () {
             end: new Date('Sep 22, 2024 10:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: '617 S Olive St, Penthouse, Los Angeles, CA 90014',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "We can't wait to see you on our big day. For any queries or issues, please contact Emma (571 866 0044) or JJ (412 641 0437)"
         }
     });
 
