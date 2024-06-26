@@ -163,6 +163,13 @@ $(function () {
     $('.player').YTPlayer();
 
 
+    document.addEventListener('touchstart', function(event) {
+        // Check if the event is on a link
+        if(event.target.tagName === 'A') {
+          event.target.click();
+        }
+      }, false);
+      
     /********************** Toggle Map Content **********************/
     $('#btn-show-map').click(function () {
         $('#map-content').toggleClass('toggle-map-content');
