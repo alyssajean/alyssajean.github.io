@@ -71,48 +71,48 @@ $(document).ready(function () {
     /***************** Nav Transformicon ******************/
 
     /* When user clicks the Icon */
-    $('.nav-toggle').click(function () {
+    $('.nav-toggle').click(function (event) {
+        event.preventDefault();
         $(this).toggleClass('active');
         $('.header-nav').toggleClass('open');
-        event.preventDefault();
     });
+
     /* When user clicks a link */
     $('.header-nav li a').click(function () {
-        $('.nav-toggle').toggleClass('active');
-        $('.header-nav').toggleClass('open');
-
+        $('.nav-toggle').removeClass('active');
+        $('.header-nav').removeClass('open');
     });
 
-/***************** Header BG Scroll ******************/
-$(function () {
-    $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
+    /***************** Header BG Scroll ******************/
+    $(function () {
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
 
-        if (scroll >= 20) {
-            $('section.navigation').addClass('fixed');
-            $('header').css({
-                "border-bottom": "none"
-            });
-            $('header .member-actions').css({
-                "top": "26px",
-            });
-            $('header .navicon').css({
-                "top": "34px",
-            });
-        } else {
-            $('section.navigation').removeClass('fixed');
-            $('header').css({
-                "border-bottom": "solid 1px rgba(255, 255, 255, 0.2)"
-            });
-            $('header .member-actions').css({
-                "top": "41px",
-            });
-            $('header .navicon').css({
-                "top": "48px",
-            });
-        }
+            if (scroll >= 20) {
+                $('section.navigation').addClass('fixed');
+                $('header').css({
+                    "border-bottom": "none"
+                });
+                $('header .member-actions').css({
+                    "top": "26px",
+                });
+                $('header .navicon').css({
+                    "top": "34px",
+                });
+            } else {
+                $('section.navigation').removeClass('fixed');
+                $('header').css({
+                    "border-bottom": "solid 1px rgba(255, 255, 255, 0.2)"
+                });
+                $('header .member-actions').css({
+                    "top": "41px",
+                });
+                $('header .navicon').css({
+                    "top": "48px",
+                });
+            }
+        });
     });
-});
 
     /***************** Smooth Scrolling ******************/
 
@@ -153,17 +153,12 @@ $(function () {
 
             '<div class="g-plusone" data-size="medium"></div>';
 
-        // '<iframe src="https://plusone.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;url=' + encodeURIComponent(window.location) + '" allowtransparency="true" frameborder="0" scrolling="no" title="+1" style="width:105px; height:21px;"></iframe>';
-
         share_bar[i].innerHTML = html;
         share_bar[i].style.display = 'inline-block';
     }
 
     /********************** Embed youtube video *********************/
     $('.player').YTPlayer();
-
-
-
 
     /********************** Toggle Map Content **********************/
     $('#btn-show-map').click(function () {
@@ -205,7 +200,6 @@ $(function () {
     });
 
     $('#add-to-cal').html(myCalendar);
-
 
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
